@@ -68,11 +68,17 @@ const status = $(event.target).data('status');
 const taskindex = taskList.findIndex(task => task.id == taskId);
 taskList[taskIndex].status = status;
 localStorage.setItem('tasks', JSON.stringify(taskList));
-    
+
 
 }
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
-
+renderTaskList(); 
+$('#formModal').submit(handleAddTask);
+$('#delete-btn').click(handleDeleteTask);
+$('.lane').droppable({
+    drop: handleDrop
+});
+$('#due-date').datepicker();
 });
