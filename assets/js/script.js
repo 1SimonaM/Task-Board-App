@@ -27,12 +27,29 @@ function renderTaskList() {
     $('.card').draggable(); 
 }
 
-
-
 // Todo: create a function to handle adding a new task
 function handleAddTask(event){
+event.preventDefault();
+const title = $('#title').val();
+const description = $('#description').val();
+const dueDate = $('#due-date').val();
 
+if (!title || !description || !dueDate) return;
+//this is an object identified w/{}
+const task = {
+id: generateTaskId(), 
+title, 
+description, 
+dueDate    
+};
+taskList.push(task);
+localStorage.setItem('tasks',
+JSON.stringify(taskList));
+localStorage.setItem('nextId', nextId);
+renderTaskList();
+$('#formModal').modal('hide');
 }
+
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
