@@ -63,6 +63,12 @@ renderTaskList();
 
 // Todo: create a function to handle dropping a task into a new status lane
 function handleDrop(event, ui) {
+const taskId = ui.draggable.attr('id').split('-')[1];
+const status = $(event.target).data('status');
+const taskindex = taskList.findIndex(task => task.id == taskId);
+taskList[taskIndex].status = status;
+localStorage.setItem('tasks', JSON.stringify(taskList));
+    
 
 }
 
