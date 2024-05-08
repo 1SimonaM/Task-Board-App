@@ -53,6 +53,11 @@ $('#formModal').modal('hide');
 
 // Todo: create a function to handle deleting a task
 function handleDeleteTask(event){
+const taskId = $(event.target).data('id');
+taskList = taskList.filter(task => task.id !== taskId);
+localStorage.setItem('tasks', 
+JSON.stringify(taskList));
+renderTaskList();
 
 }
 
