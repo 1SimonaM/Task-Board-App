@@ -25,6 +25,8 @@ This app will run in the browser and feature dynamically updated HTML and CSS, p
 
 ## Screenshots
 
+https://github.com/1SimonaM/Task-Board-App/blob/main/assets/images/FinalScreenshot.png
+
 https://github.com/1SimonaM/Task-Board-App/blob/main/assets/images/All%20tasks.png
 
 
