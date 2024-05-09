@@ -9,7 +9,7 @@ This application allow teams to manage project tasks by displaying the task prog
 
 ## Features
 
-These tasks are color-coded based on their deadline yellow for tasks nearing the deadline, red for overdue tasks. A new task can be added or stored with this application. 
+These tasks are color-coded based on their deadline. Yellow for tasks nearing the deadline, red for overdue tasks, white for future tasks. A new task can be added or created with this application. 
 New tasks can be added by clicking the "Add New Task" button and saved in the localStorage. 
 Users can drag and drop tasks to different progress columns or delete them by clicking the "Delete" button next to each task. Deleted tasks will not be added back after refreshing the page.
 
@@ -23,6 +23,7 @@ This app will run in the browser and feature dynamically updated HTML and CSS, p
 
 
 ## Links
+
 
 
 ## Contributing
