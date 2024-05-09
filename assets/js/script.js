@@ -19,7 +19,7 @@ function createTaskCard(task) {
   console.log("isOverdue:", isOverdue, "isNearDeadline:", isNearDeadline);
 
   let statusClass =
-    task.status === "in-progress" || task.status === "done"
+     task.status === "done"
       ? "bg-light"
       : isOverdue
       ? "bg-danger"
